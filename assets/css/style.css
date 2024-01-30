@@ -252,6 +252,12 @@ section {
 .page_color_circle1 {
   top: 20%;
   right: -6%;
+  
+  @media (max-width:600px) {
+    & {
+      right: -8%;
+    }
+  }
 }
 
 .page_color_circle2 {
@@ -264,6 +270,11 @@ section {
       left: -4%;
     }
   }
+  @media (max-width:600px) {
+    & {
+      left: -6%;
+    }
+  }
 }
 
 .page_color_circle3 {
@@ -273,6 +284,11 @@ section {
   @media (min-width:1400px) {
     & {
       left: -4%;
+    }
+  }
+  @media (max-width:600px) {
+    & {
+      left: -6%;
     }
   }
 }
