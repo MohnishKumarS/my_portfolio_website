@@ -8,10 +8,12 @@
           navbar.style.backgroundColor = "#fff";
           navbar.style.boxShadow = "none";
           navbar.style.height = "80px"
+          navbar.style.backdropFilter = 'blur(0px)';
         } else {
-          navbar.style.backgroundColor = "#ebf2ff";
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
           navbar.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.1)";
           navbar.style.height = "66px";
+          navbar.style.backdropFilter = 'blur(10px)';
           /* Set your desired background color here */
         }
       });

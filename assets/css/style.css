@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Press+Start+2P&display=swap');
 
 
 
@@ -17,6 +15,7 @@
   --main-color: #ffd936;
   --sec--color: #10497a;
   --sam-color: #f99903;
+  --loc-color:#f59e0d;
 }
 
 html {
@@ -30,6 +29,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'League Spartan', sans-serif !important;
+  /* font-family: 'Press Start 2P', system-ui !important; */
 }
 
 a {
@@ -37,13 +37,15 @@ a {
 }
 
 /* ````````` COMMON ````````````````` */
+/* =================================== */
 
 /* --- BTN -- */
 .btn-main {
   outline: none;
   display: inline-block;
   background-color: var(--main-color);
-  font-size: 1.1rem;
+  font-family: 'Press Start 2P', system-ui;
+  font-size: .9rem;
   padding: 5px 25px;
   border-radius: 5px;
   /* text-transform: capitalize; */
@@ -75,11 +77,12 @@ a {
 
 .title-sec {
   /* font-family: 'Rubik Burned', system-ui; */
-  font-family: 'Baloo Paaji 2', sans-serif;
+  /* font-family: 'Baloo Paaji 2', sans-serif; */
+  font-family: 'Press Start 2P', system-ui;
   font-weight: 700;
   font-size: 4rem;
   color: var(--main-color) !important;
-  font-size: calc(35px + (75 - 35) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(17px + (45 - 17) * ((100vw - 300px) / (1300 - 300)));
   text-shadow: 4px 4px 0 rgba(16, 16, 16, .18);
 
   @media (max-width:768px) {
@@ -115,6 +118,7 @@ section {
 }
 
 /* ````````` ANIMATE ``````````````` */
+/* =================================== */
 
 .page_wrapper {
   position: relative;
@@ -226,6 +230,34 @@ section {
   left: 9%;
   z-index: -1;
 }
+.page_animate_move9 {
+  top: 43%;
+  right: 0%;
+  width: 200px;
+  height: auto;
+  opacity: .6;
+  z-index: -1;
+
+  @media (max-width:767px){
+    & {
+      display: none;
+    }
+  }
+}
+.page_animate_move10 {
+  top: 21%;
+  left: 0%;
+  width: 200px;
+  height: auto;
+  opacity: .4;
+  z-index: -1;
+
+  @media (max-width:767px){
+    & {
+      display: none;
+    }
+  }
+}
 
 @keyframes moving {
   0% {
@@ -326,27 +358,31 @@ section {
 }
 
 /* ````````````` NAVBAR ````````````` */
+/* =================================== */
 .navbar .nav-item .nav-link {
-  font-family: 'Rubik Burned', system-ui !important;
+  /* font-family: 'Rubik Burned', system-ui !important; */
+  font-family: 'Press Start 2P', system-ui !important;
   color: black;
-  font-weight: 800;
+  font-weight: 700;
   padding-right: 50px !important;
-  font-size: 18px;
+  font-size: 11px;
 }
 
 .navbar .nav-item.mee .nav-link {
   color: tomato;
 }
 
-/* `````````` HEADER ```````````````` */
+/* `````````` HEADER HERO ```````````````` */
+/* =================================== */
 
 
 .header__title h1 {
-  font-family: 'Baloo Paaji 2', sans-serif;
+  /* font-family: 'Baloo Paaji 2', sans-serif; */
+  font-family: 'Press Start 2P', system-ui;
   font-weight: 700;
   font-size: 50px;
   color: #212529;
-  font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(16px + (50 - 16) * ((100vw - 300px) / (1300 - 300)));
   text-shadow: 5px 5px 0 rgba(16, 16, 16, .18);
 
   @media (max-width: 768px) {
@@ -359,6 +395,7 @@ section {
 
 .header__title .header__title-up {
   color: var(--main-color);
+  
 }
 
 .header__sub-title {
@@ -475,6 +512,7 @@ section {
 
 
 /* ``````````````` NAVBAR ````````````` */
+/* =================================== */
 .navbar {
   position: sticky !important;
   top: 0;
@@ -489,6 +527,7 @@ section {
 
 
 /* ````````````` ABOUT `````````````````` */
+/* =================================== */
 #about {
   padding: 7rem 0 0;
 }
@@ -497,10 +536,11 @@ section {
   position: relative;
   margin: 1rem;
   text-align: center;
+  border-radius: 5px;
 
 }
 
-.about_profile::before {
+/* .about_profile::before {
   content: '';
   position: absolute;
   top: 16px;
@@ -508,19 +548,29 @@ section {
   width: 100%;
   height: 100%;
   border: 3px solid rgb(143, 143, 143);
-  border-radius: 0 20px 0 20px;
+  z-index: -1;
+} */
+
+.about_profile::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border-left: 4px solid #ffd936;
+  border-radius: 10px;
   z-index: -1;
 }
-
 @media (max-width:992px) {
   .about_profile::before {
     content: none;
   }
 }
 
-/* .about_profile img{
-  border-radius: 0 30px 0 30px;
-} */
+.about_profile img{
+  border-radius: 10px;
+}
 
 .about__content-text {
   font-size: 15px;
@@ -553,6 +603,8 @@ section {
 
 
 /* ``````````````` PROGRAMMING LANG ````````` */
+/* =========================================== */
+
 .lang__img {
   display: inline-block;
   width: 100px;
@@ -574,6 +626,8 @@ section {
 }
 
 /* `````````````````` PROGRESS BAR `````````````` */
+/* ============================================== */
+
 
 .skill-bar {
   text-align: center;
@@ -761,10 +815,16 @@ section {
 }
 
 .projects .title-sec {
-  font-size: 2rem !important;
-  color: #ceb558 !important;
+  font-size: 1rem !important;
+  color: #7a7a7a !important;
   font-weight: 500;
   text-shadow: none;
+
+  @media (max-width:576px) {
+    & {
+      font-size: .8rem !important;
+    }
+  }
 
 }
 
