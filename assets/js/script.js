@@ -17,9 +17,11 @@
           /* Set your desired background color here */
         }
       });
+
+      AOS.init({
+        duration:4000
+      });
     });
-
-
 
 
 
@@ -120,7 +122,7 @@
 
     function downloadPDF() {
       // Path to your PDF file
-      var pdfFilePath = 'Praveen.pdf';
+      var pdfFilePath = 'Mohnish_Resume.pdf';
 
       // Fetch the PDF file
       fetch(pdfFilePath)
@@ -132,7 +134,7 @@
           // Create an anchor element
           var a = document.createElement('a');
           a.href = url;
-          a.download = 'file.pdf'; // Specify the name for the downloaded file
+          a.download = 'Mohnish_Resume.pdf'; // Specify the name for the downloaded file
 
           // Programmatically trigger a click event on the anchor element
           a.click();
@@ -148,4 +150,3 @@
 
 
 
-    AOS.init();

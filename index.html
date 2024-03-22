@@ -44,6 +44,7 @@
 
   <div class="page_wrapper">
 
+    <!-- ------- HEADER SECTION ------------- -->
     <div class="page_animate_move1 page_animate">
       <img src="assets/image/skill/http.png" alt="programming-skills">
     </div>
@@ -97,18 +98,19 @@
 
         <div class="header-content">
           <div class="header__title">
-            <h1 class="header__title-up">
+            <h1 class="header__title-up" data-aos="zoom-out" data-aos-duration="2000">
               <span class="title-symbol">&lt;</span> Hello world <span class="title-symbol">!&gt;</span>
             </h1>
-            <h1 class="header__title-down">I'm Mohnish</h1>
+            <h1 class="header__title-down" data-aos="zoom-in" data-aos-duration="2000">I'm Mohnish</h1>
           </div>
-          <div class="header__sub-title">Full Stack developer</div>
+          <div class="header__sub-title" data-aos="fade-left" data-aos-duration="3000">Full Stack developer</div>
         </div>
 
       </div>
 
     </div>
-
+    
+    <!-- ------- HEADER NAVBAR ------------- -->
     <head>
       <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid">
@@ -146,7 +148,7 @@
         </div>
       </nav>
     </head>
-
+    <!-- ------- ABOUT SECTION ------------- -->
     <section class="section" id="about">
       <div class="title-head " data-aos="zoom-in-down" data-aos-duration="1000">
         <h2 class="title-sec"><span class="title-symbol">&lt;</span> about_me <span class="title-symbol">&gt;</span>
@@ -273,14 +275,14 @@
                   </div>
                 </div>
                 <div class="about__btn">
-                  <a href="" class="btn-main">{ download_resume }</a>
+                  <button class="btn-main download-cv" title="Download" onclick="downloadPDF()">{ download_resume }</button>
                 </div>
               </div>
             </div>
           </div>
     </section>
 
-
+    <!-- ------- RESPONSIBILITY ------------- -->
     <section>
       <div class="expertise">
         <div class="container">
@@ -322,7 +324,7 @@
       </div>
     </section>
 
-
+    <!-- ------- TECHNICAL SKILL ------------- -->
     <section>
       <div>
         <div class="owl-carousel skill-carousel ">
@@ -397,7 +399,7 @@
     </section>
 
 
-
+    <!-- ------- PROGRAMMING LANGUAGE ------------- -->
     <section id="skills">
       <div class="title-head" data-aos="zoom-in-down" data-aos-duration="1000">
         <h2 class="title-sec"><span class="title-symbol">&lt;</span> skills <span class="title-symbol">!&gt;</span></h2>
@@ -486,7 +488,7 @@
 
 
 
-
+    <!-- ------- PROJECT SECTION ------------- -->
 
     <section id="projects">
       <div class="title-head " data-aos="zoom-in-down" data-aos-duration="1000">
@@ -510,7 +512,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title ></h3> -->
-                  <a href="https://rentointegrated.com/" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="https://rentointegrated.com/" class="btn-main" target="_blank" title="view project">{ view /}</a>
                 </div>
               </div>
             </div>
@@ -522,7 +524,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title</h3> -->
-                  <a href="https://elaverointegrated.com/" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="https://elaverointegrated.com/" class="btn-main" target="_blank" title="view project">{ view /}</a>
 
                 </div>
               </div>
@@ -535,7 +537,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title</h3> -->
-                  <a href="https://srisaidecors.com/" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="https://srisaidecors.com/" class="btn-main" target="_blank" title="view project">{ view /}</a>
 
                 </div>
               </div>
@@ -554,7 +556,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title ></h3> -->
-                  <a href="https://shirt-inc.com/" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="https://shirt-inc.com/" class="btn-main" target="_blank" title="view project">{ view /}</a>
                 </div>
               </div>
             </div>
@@ -566,7 +568,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title</h3> -->
-                  <a href="https://mrspecs.xtremerental.shop/" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="https://mrspecs.xtremerental.shop/" class="btn-main" target="_blank" title="view project">{ view /}</a>
 
                 </div>
               </div>
@@ -579,7 +581,7 @@
                 </div>
                 <div class="projects_text">
                   <!-- <h3 class="project_title">Project Title</h3> -->
-                  <a href="" class="btn-main" target="_blank">{ view /}</a>
+                  <a href="#" class="btn-main" target="_blank" title="view project">{ view /}</a>
 
                 </div>
               </div>
@@ -592,7 +594,7 @@
 
 
 
-
+    <!-- ------- INFO SECTION ------------- -->
     <section id="info" class="pb-0">
       <div class="mywork_wrapper">
         <div class="container">
@@ -602,13 +604,14 @@
                 <div>
                   <div class="code-text">&lt;html&gt;</div>
                   <span class="code-text">&lt;head&gt;</span>
-                  <div class="code-text ps-3">&lt;title&gt; <span class="code-val">Information</span> &lt;/title&gt;</div>
+                  <div class="code-text ps-3">&lt;title&gt; <span class="code-val">Information</span> &lt;/title&gt;
+                  </div>
                   <span class="code-text">&lt;/head&gt;</span>
                   <div class="code-text ">&lt;body&gt;</div>
                 </div>
               </div>
             </div>
-           
+
             <div class="myWork-content">
               <div>
                 <div class="offset-md-2 col-md-10  col-xl-8 myWork_col">
@@ -635,24 +638,32 @@
                     <div class="code-text">&lt;h2&gt; <span class="code-val">Static website :</span> &lt;/h2&gt;</div>
                     <div class="code-text">&lt;main&gt;</div>
                     <div class="ps-4">
-                      <div class="code-text">&lt;a&gt; <a class="code-link"
-                       target="_blank" href="https://srisaidecors.com/"><span><i class="fa-fade pe-1 fa-solid fa-people-roof"></i></span> https://srisaidecors.com/</a>
-                      &lt;/a&gt;</div>
-                      <div class="code-text">&lt;a&gt; <a class="code-link"
-                         target="_blank" href="https://elaverointegrated.com/"><span><i class="fa-fade pe-1 fa-solid fa-chalkboard-user"></i></span>
+                      <div class="code-text">&lt;a&gt; <a class="code-link" target="_blank"
+                          href="https://srisaidecors.com/"><span><i class=" pe-1 fa-solid fa-people-roof"></i></span>
+                          https://srisaidecors.com/</a>
+                        &lt;/a&gt;</div>
+                      <div class="code-text">&lt;a&gt; <a class="code-link" target="_blank"
+                          href="https://elaverointegrated.com/"><span><i
+                              class=" pe-1 fa-solid fa-chalkboard-user"></i></span>
                           https://elaverointegrated.com/</a> &lt;/a&gt;</div>
-                      <div class="code-text">&lt;a&gt; <a class="code-link"target="_blank" href="https://rentointegrated.com/"><span><i class="fa-fade pe-1 fa-solid fa-broom-ball"></i></span> https://rentointegrated.com/</a> &lt;/a&gt;</div>
+                      <div class="code-text">&lt;a&gt; <a class="code-link" target="_blank"
+                          href="https://rentointegrated.com/"><span><i class=" pe-1 fa-solid fa-broom-ball"></i></span>
+                          https://rentointegrated.com/</a> &lt;/a&gt;</div>
 
                     </div>
                     <div class="code-text">&lt;/main&gt;</div>
                     <div class="code-text">&lt;h2&gt; <span class="code-val">dynamic website :</span> &lt;/h2&gt;</div>
                     <div class="code-text">&lt;main&gt;</div>
                     <div class="ps-4">
-                      <div class="code-text">&lt;a&gt; <a class="code-link"
-                         target="_blank" href="https://shirt-inc.com/"><span><i class="fa-fade pe-1 fa-solid fa-cart-shopping"></i></span>  https://shirt-inc.com/</a> &lt;/a&gt;</div>
-                      <div class="code-text">&lt;a&gt; <a class="code-link"target="_blank" href="https://mrspecs.xtremerental.shop/"><span><i class="fa-fade pe-1 fa-solid fa-glasses"></i></span> https://mrspecs.xtremerental.shop/</a> &lt;/a&gt;</div>
+                      <div class="code-text">&lt;a&gt; <a class="code-link" target="_blank"
+                          href="https://shirt-inc.com/"><span><i class=" pe-1 fa-solid fa-cart-shopping"></i></span>
+                          https://shirt-inc.com/</a> &lt;/a&gt;</div>
+                      <div class="code-text">&lt;a&gt; <a class="code-link" target="_blank"
+                          href="https://mrspecs.xtremerental.shop/"><span><i
+                              class=" pe-1 fa-solid fa-glasses"></i></span> https://mrspecs.xtremerental.shop/</a>
+                        &lt;/a&gt;</div>
                       <!-- <div class="code-text">&lt;a&gt; <a class="code-link"
-                         target="_blank" href="https://www.instagram.com/_moniz___/"><span><i class="fa-fade pe-1 fa-brands fa-instagram pe-1"></i></span> https://www.instagram.com/_moniz___/</a>
+                         target="_blank" href="https://www.instagram.com/_moniz___/"><span><i class=" pe-1 fa-brands fa-instagram pe-1"></i></span> https://www.instagram.com/_moniz___/</a>
                         &lt;/a&gt;</div> -->
 
                     </div>
@@ -668,8 +679,8 @@
 
                     <div class="code-text">&lt;main&gt;</div>
                     <div class="ps-4">
-                      <div class="code-text">&lt;p&gt; <span class="code-val">JavaScript Algorithms and Data Structures
-                          at freeCodeCamp </span> &lt;/p&gt;</div>
+                      <div class="code-text">&lt;h3&gt; <span class="code-val">JavaScript Algorithms and Data Structures
+                          at freeCodeCamp </span> &lt;/h3&gt;</div>
                       <div class="code-text">&lt;button&gt; <a class="code-link"
                           href="https://www.freecodecamp.org/certification/Mohnishkumar/javascript-algorithms-and-data-structures"
                           target="_blank">view certificate</a> &lt;/button&gt;</div>
@@ -687,11 +698,14 @@
                     <div class="code-text">&lt;ul&gt;</div>
                     <div class="ps-4">
                       <div class="code-text">&lt;li&gt; <a class="code-link"
-                          href="mailto:mohnish101998@gmail.com"><span><i class="fa-fade fa-regular fa-envelope pe-1"></i></span>
+                          href="mailto:mohnish101998@gmail.com"><span><i
+                              class=" fa-regular fa-envelope pe-1"></i></span>
                           mohnish101998@gmail.com</a> &lt;/li&gt;</div>
-                      <div class="code-text">&lt;li&gt; <a class="code-link" href="tel:+917418667102"><span><i class="fa-fade fa-solid fa-mobile-screen pe-1"></i></span> 7418667102</a> &lt;/li&gt;</div>
-                      <div class="code-text">&lt;li&gt; <a class="code-link"
-                          href="https://www.instagram.com/_moniz___/" target="_blank"><span><i class="fa-fade fa-brands fa-instagram pe-1"></i></span> https://www.instagram.com/_moniz___/</a>
+                      <div class="code-text">&lt;li&gt; <a class="code-link" href="tel:+917418667102"><span><i
+                              class=" fa-solid fa-mobile-screen pe-1"></i></span> 7418667102</a> &lt;/li&gt;</div>
+                      <div class="code-text">&lt;li&gt; <a class="code-link" href="https://www.instagram.com/_moniz___/"
+                          target="_blank"><span><i class=" fa-brands fa-instagram pe-1"></i></span>
+                          https://www.instagram.com/_moniz___/</a>
                         &lt;/li&gt;</div>
 
                     </div>

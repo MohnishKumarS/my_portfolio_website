@@ -11,11 +11,11 @@
 }
 
 :root {
-  --color: #c9f31e;
+  /* --color: #c9f31e; */
   --main-color: #ffd936;
   --sec--color: #10497a;
-  --sam-color: #f99903;
-  --loc-color: #f59e0d;
+  /* --sam-color: #f99903;
+  --loc-color: #f59e0d; */
 }
 
 html {
@@ -27,7 +27,7 @@ body {
   font-size: 16px;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: 'League Spartan', sans-serif !important;
   /* font-family: 'Press Start 2P', system-ui !important; */
 }
@@ -46,13 +46,14 @@ a {
   background-color: var(--main-color);
   font-family: 'Press Start 2P', system-ui;
   font-size: .9rem;
-  padding: 5px 25px;
+  padding: 9px 25px;
   border-radius: 5px;
   /* text-transform: capitalize; */
   text-align: center;
   font-weight: 500;
   color: #383838;
   margin: 1.5rem 0;
+  border: 0;
   border-color: #ceaa09;
   border-bottom-style: solid;
   border-bottom-width: 6px;
@@ -60,11 +61,11 @@ a {
 
   &:hover {
     position: relative;
-    top: 3px;
+    top: 5px;
     border-bottom-width: 2px;
     transform: scale(1.08);
     box-shadow: 2px 2px 10px var(--main-color);
-    rotate: 2deg;
+    /* rotate: 2deg; */
 
   }
 
@@ -82,7 +83,7 @@ a {
   font-weight: 700;
   font-size: 4rem;
   color: var(--main-color) !important;
-  font-size: calc(17px + (45 - 17) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(17px + (40 - 17) * ((100vw - 300px) / (1300 - 300)));
   text-shadow: 4px 4px 0 rgba(16, 16, 16, .18);
 
   @media (max-width:768px) {
@@ -119,6 +120,7 @@ section {
   padding: 4rem 0;
 }
 
+
 /* ````````` ANIMATE ``````````````` */
 /* =================================== */
 
@@ -126,6 +128,7 @@ section {
   position: relative;
   height: 100%;
   width: 100%;
+
 }
 
 .page_animate {
@@ -285,16 +288,20 @@ section {
   z-index: -1;
 }
 
-.page_color_circle1 {
-  top: 20%;
-  right: -6%;
+@media (max-width:992px){
+  .page_color_circle1 {
+    top: 20%;
+    left: -4%;
+    /* right: -6%; */
 
-  @media (max-width:600px) {
-    & {
-      right: -12%;
+    @media (max-width:600px) {
+      & {
+        left: -12%;
+      }
     }
   }
 }
+
 
 .page_color_circle2 {
   top: 33%;
@@ -315,7 +322,7 @@ section {
 }
 
 .page_color_circle3 {
-  top: 53%;
+  top: 52%;
   left: -5%;
 
   @media (min-width:1400px) {
@@ -365,6 +372,17 @@ section {
 
 /* ````````````` NAVBAR ````````````` */
 /* =================================== */
+
+.navbar {
+  position: sticky !important;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  transition: background-color 1s ease-in, box-shadow .5s ease-in, height .5s ease-out;
+  z-index: 100;
+
+}
 .navbar .nav-item .nav-link {
   /* font-family: 'Rubik Burned', system-ui !important; */
   font-family: 'Press Start 2P', system-ui !important;
@@ -376,6 +394,15 @@ section {
 
 .navbar .nav-item.mee .nav-link {
   color: tomato;
+}
+
+@media (max-width:992px) {
+  .navbar .nav-item{
+    padding-bottom: 10px;
+  }
+  .navbar .nav-item:nth-child(1){
+    padding-top: 20px;
+  }
 }
 
 /* `````````` HEADER HERO ```````````````` */
@@ -417,7 +444,7 @@ section {
 .header {
   text-align: center;
   text-transform: uppercase;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   position: relative;
   height: 100vh;
   /* overflow-y: scroll; */
@@ -433,7 +460,7 @@ section {
 .concept {
   position: relative;
   padding: 5em;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   scroll-snap-align: center;
 
@@ -460,6 +487,10 @@ section {
   background: yellow;
   padding: 8em;
   background: url("../image/bg1.jpg") no-repeat center center / cover fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   .header-content {
     position: absolute;
@@ -517,19 +548,7 @@ section {
 
 
 
-/* ``````````````` NAVBAR ````````````` */
-/* =================================== */
-.navbar {
-  position: sticky !important;
-  top: 0;
-  height: 80px;
-  /* padding: 20px 0 !important; */
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.171); */
-  background-color: white;
-  transition: background-color 1s ease-in, box-shadow .5s ease-in, height .5s ease-out;
-  z-index: 100;
 
-}
 
 
 /* ````````````` ABOUT `````````````````` */
@@ -538,7 +557,7 @@ section {
   padding: 7rem 0 0;
 }
 
-.about_3d{
+.about_3d {
   perspective: 1300px;
 }
 
@@ -547,11 +566,11 @@ section {
   margin: 1rem;
   text-align: center;
   border-radius: 5px;
-  transform: rotateY(0deg) rotateX(0deg) scale(0.5); 
+  transform: rotateY(0deg) rotateX(0deg) scale(0.5);
   transform-style: preserve-3d;
-  animation:30s flipme linear infinite;
-  transition:transform 300ms ease;
-  transform-origin:50% 50%;
+  animation: 30s flipme linear infinite;
+  transition: transform 300ms ease;
+  transform-origin: 50% 50%;
 
 }
 
@@ -570,20 +589,23 @@ section {
 
 @media (max-width:992px) {
   .about_profile::after {
-    content: none ;
+    content: none;
   }
 }
-  @keyframes flipme {
+
+@keyframes flipme {
   0% {
     transform: rotateY(-30deg) rotateX(0deg);
   }
+
   50% {
     transform: rotateY(0deg) rotateX(10deg);
   }
+
   100% {
     transform: rotateY(-30deg) rotateX(0deg);
   }
-   
+
 }
 
 .about_profile img {
@@ -596,7 +618,7 @@ section {
   line-height: 1.8;
   color: black;
   margin-bottom: 2rem;
-  user-select:none;
+  user-select: none;
 }
 
 .about__info-item {
@@ -655,9 +677,9 @@ section {
 
   .circular {
     position: relative;
-    width: 180px;
-    height: 180px;
-    background-color: var(--main-color);
+    width: 170px;
+    height: 170px;
+    background: var(--main-color);
     border-radius: 100%;
     display: grid;
     place-items: center;
@@ -669,9 +691,9 @@ section {
       position: absolute;
       width: 84%;
       height: 84%;
-      background-color: white;
+      /* background-color: white; */
       border-radius: 100%;
-      box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.12), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.712), inset 0 12px 10px -10px rgba(0, 0, 0, 0.196);
+      /* box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.12), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.712), inset 0 12px 10px -10px rgba(0, 0, 0, 0.196); */
     }
 
     & .circle-value {
