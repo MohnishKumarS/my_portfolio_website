@@ -3,27 +3,73 @@
     document.addEventListener("DOMContentLoaded", function () {
       const navbar = document.getElementById("navbar");
 
-      window.addEventListener("scroll", function () {
-        if (window.scrollY < 870) {
-          navbar.style.backgroundColor = "#fff";
-          navbar.style.boxShadow = "none";
-          navbar.style.height = "80px"
-          navbar.style.backdropFilter = 'blur(0px)';
-        } else {
-          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
-          navbar.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.1)";
-          navbar.style.height = "66px";
-          navbar.style.backdropFilter = 'blur(10px)';
-          /* Set your desired background color here */
-        }
-      });
+      // Check if dark mode is already enabled
+      const modeBtn = document.querySelector('.modeTheme');
+      const modeIcon = document.querySelector('.modeTheme i');
+      const body = document.querySelector('body');
+      console.log(modeBtn);
 
-      AOS.init({
-        duration:4000
-      });
+      if (localStorage.getItem('dark-mode') == 'enabled') {
+        body.classList.add('dark-mode');
+        modeIcon.className = 'fa-solid fa-sun';
+      }
+
+      modeBtn.addEventListener('click', function () {
+        // this.classList.toggle('fa-sun');
+        body.classList.toggle('dark-mode');
+
+        if (body.classList.contains('dark-mode')) {
+          modeIcon.className = 'fa-solid fa-sun';
+          localStorage.setItem('dark-mode', 'enabled'); // Moon icon for dark mode
+        } else {
+          modeIcon.className = 'fa-solid fa-moon';
+          localStorage.setItem('dark-mode', 'disabled'); // Sun icon for light mode
+        }
+      })
+
+      // window.addEventListener("scroll", function () {
+      //   if (window.scrollY < 870) {
+      //     navbar.style.backgroundColor = "#fff";
+      //     navbar.style.boxShadow = "none";
+      //     navbar.style.height = "80px"
+      //     navbar.style.backdropFilter = 'blur(0px)';
+      //   } else {
+      //     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
+      //     navbar.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.1)";
+      //     navbar.style.height = "66px";
+      //     navbar.style.backdropFilter = 'blur(10px)';
+      //     /* Set your desired background color here */
+      //   }
+      // });
+
+
     });
 
+    window.onscroll = function () {
+      // ------ to scroll down to show title highlight
+      // console.log(window.scrollY);
+      const titles = document.querySelectorAll('.title-sec');
 
+      titles.forEach(title => {
+        const distanceFromTop = title.getBoundingClientRect().top;
+        // console.log(distanceFromTop);
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+
+        if (distanceFromTop < 400) {
+          title.style.opacity = 1;
+        } else {
+          var opacity = (window.innerHeight - distanceFromTop) / window.innerHeight;
+          opacity = Math.min(Math.max(opacity, 0.1), 1);
+          title.style.opacity = opacity;
+        }
+      })
+
+    }
+
+    AOS.init({
+      duration: 4000
+    });
 
     // -------- programming lang carousel -----------
 
@@ -116,7 +162,7 @@
       });
     });
 
-    
+
 
     // Call the function to initiate the download
 
@@ -144,9 +190,3 @@
         })
         .catch(error => console.error('Error fetching PDF:', error));
     }
-
-
-
-
-
-

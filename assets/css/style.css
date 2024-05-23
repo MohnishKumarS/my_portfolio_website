@@ -30,11 +30,85 @@ body {
   overflow-x: hidden !important;
   font-family: 'League Spartan', sans-serif !important;
   /* font-family: 'Press Start 2P', system-ui !important; */
+
 }
 
 a {
   text-decoration: none !important;
 }
+
+body.dark-mode {
+  --dark-color: #2b2626;
+  --light-color: #ffffff;
+  transition: all 0.9s ease-in;
+
+  background-color: var(--dark-color);
+  color: var(--light-color);
+
+  & .exp_card {
+    box-shadow: none;
+  }
+
+  & .page_color {
+    display: none;
+  }
+
+  & .skill-bar .circular {
+    box-shadow: none;
+  }
+
+  & .page_animate_move10 {
+    display: block;
+  }
+
+  & .navbar {
+    background-color: var(--dark-color);
+    border-bottom: 1px solid #505050;
+    box-shadow: none;
+  }
+
+  & .navbar .nav-item .nav-link {
+    color: var(--light-color);
+  }
+
+  & .navbar .nav-item.mee .nav-link {
+    color: var(--main-color);
+  }
+
+  .modeTheme {
+    border-color: rgb(209, 209, 209);
+
+    &:hover {
+      background-color: rgb(255, 255, 255);
+
+      & i {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+
+.modeTheme {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: rgb(34, 28, 28);
+
+    & i {
+      color: white;
+    }
+  }
+}
+
+
 
 /* ````````` COMMON ````````````````` */
 /* =================================== */
@@ -83,8 +157,17 @@ a {
   font-weight: 700;
   font-size: 4rem;
   color: var(--main-color) !important;
-  font-size: calc(17px + (40 - 17) * ((100vw - 300px) / (1300 - 300)));
+  font-size: calc(17px + (35 - 17) * ((100vw - 300px) / (1300 - 300)));
   text-shadow: 4px 4px 0 rgba(16, 16, 16, .18);
+  opacity: 0.1;
+  -webkit-transition: opacity 0.5s ease;
+  /* Safari and Chrome */
+  -moz-transition: opacity 0.5s ease;
+  /* Firefox */
+  -o-transition: opacity 0.5s ease;
+  /* Opera */
+  transition: opacity 0.5s ease;
+  /* Standard syntax */
 
   @media (max-width:768px) {
     & {
@@ -252,6 +335,7 @@ section {
 }
 
 .page_animate_move10 {
+  display: none;
   top: 21%;
   left: 0%;
   width: 200px;
@@ -261,7 +345,7 @@ section {
 
   @media (max-width:992px) {
     & {
-      display: none;
+      display: none !important;
     }
   }
 }
@@ -288,7 +372,7 @@ section {
   z-index: -1;
 }
 
-@media (max-width:992px){
+@media (max-width:992px) {
   .page_color_circle1 {
     top: 20%;
     left: -4%;
@@ -371,7 +455,7 @@ section {
 }
 
 
-.bg-colors{
+.bg-colors {
   width: 100%;
   height: 70%;
   position: absolute;
@@ -382,7 +466,8 @@ section {
 
 }
 
-#tech,#resp{
+#tech,
+#resp {
   margin: 5rem 0;
 }
 
@@ -395,10 +480,12 @@ section {
   height: 80px;
   width: 100%;
   background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
   transition: background-color 1s ease-in, box-shadow .5s ease-in, height .5s ease-out;
   z-index: 100;
 
 }
+
 .navbar .nav-item .nav-link {
   /* font-family: 'Rubik Burned', system-ui !important; */
   font-family: 'Press Start 2P', system-ui !important;
@@ -413,10 +500,11 @@ section {
 }
 
 @media (max-width:992px) {
-  .navbar .nav-item{
+  .navbar .nav-item {
     padding-bottom: 10px;
   }
-  .navbar .nav-item:nth-child(1){
+
+  .navbar .nav-item:nth-child(1) {
     padding-top: 20px;
   }
 }
@@ -561,16 +649,10 @@ section {
 }
 
 
-
-
-
-
-
-
 /* ````````````` ABOUT `````````````````` */
 /* =================================== */
 #about {
-  padding: 7rem 0 0;
+  padding: 8rem 0 0;
 }
 
 .about_3d {
@@ -632,7 +714,6 @@ section {
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 1.8;
-  color: black;
   margin-bottom: 2rem;
   user-select: none;
 }
@@ -695,6 +776,7 @@ section {
     position: relative;
     width: 170px;
     height: 170px;
+    color: #000;
     background: var(--main-color);
     border-radius: 100%;
     display: grid;
