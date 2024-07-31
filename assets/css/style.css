@@ -1021,18 +1021,21 @@ section {
   cursor: grab;
 }
 
-
-
 .projects_img::-webkit-scrollbar {
   display: none;
 }
 
 .project_title {
-  font-size: 18px;
-
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.project_lang{
+  color: #7a7a7a;
+  letter-spacing: 1px;
 }
 
-.projects_text {
+.projects_btn {
   text-align: center;
 }
 
