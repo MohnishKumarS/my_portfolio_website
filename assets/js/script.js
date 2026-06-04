@@ -168,7 +168,7 @@
 
     function downloadPDF() {
       // Path to your PDF file
-      var pdfFilePath = 'Mohnish_Resume.pdf';
+      var pdfFilePath = 'mohnish_cv.pdf';
 
       // Fetch the PDF file
       fetch(pdfFilePath)
@@ -180,7 +180,7 @@
           // Create an anchor element
           var a = document.createElement('a');
           a.href = url;
-          a.download = 'Mohnish_Resume.pdf'; // Specify the name for the downloaded file
+          a.download = 'mohnish_cv.pdf'; // Specify the name for the downloaded file
 
           // Programmatically trigger a click event on the anchor element
           a.click();
